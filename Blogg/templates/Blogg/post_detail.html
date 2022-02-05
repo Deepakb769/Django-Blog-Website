@@ -1,0 +1,12 @@
+{% extends 'Blogg/boot.html'%}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <h3 class = "article-title">{{ object.title }}</h3>
+                <p class="mr-2" href="#">{{ object.author }}</p>
+            </div>
+            <small class="text-muted">{{ object.pub_date }}</small>
+        </div>
+    </article>
+{% endblock content %}

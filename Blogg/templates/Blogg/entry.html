@@ -1,0 +1,14 @@
+{% extends 'Blogg/boot.html'%}
+{% block content %}
+        {% for post in posts %}
+           <article class="media content-section">
+               <div class="media-body">
+                   <div class="article-metadata">
+                       <h3><a class="mr-2" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h3>
+                       <p class="text-muted">{{ post.author }}</p>
+                   </div>
+                   <small class="article-content">{{ post.pub_date }}</small>
+               </div>
+           </article>
+        {% endfor %}
+{% endblock content %}
